@@ -33,7 +33,7 @@ a {
   color: rgb(255, 255, 255);
   padding: 1rem;
   padding-bottom: 40px;
-  height: 200px;
+  height: 220px;
   overflow-y: scroll;
   scrollbar-width: none;
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
@@ -50,7 +50,8 @@ a {
   background: rgb(22, 22, 22);
 }
 
-.card:hover, .card-back:hover, .card:active, .card-back:active {
+.card:hover, .card-back:hover {
+  color: #000;
   border-radius: 4px;
   background-image: linear-gradient(97deg, rgba(47, 176, 183, 0.7205543073249583) 39%, rgba(249, 129, 165, 0.5) 104%),linear-gradient(178deg, rgba(40, 33, 145, 0.6076577822627169) 10%, rgba(242, 161, 157, 0.5) 128%),linear-gradient(135deg, rgba(81, 154, 232, 0.06078967359295273) 65%, rgba(255, 204, 218, 0.5) 69%),linear-gradient(120deg, rgba(60, 160, 196, 0.8985724085130646) 51%, rgba(244, 127, 144, 0.5) 18%);
   background-blend-mode: screen,screen,color,hard-light;
@@ -65,14 +66,19 @@ a {
 }
 
 .card-title {
+  display: flex;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   left: 0;
-  background: rgba(22, 22, 22, 0.9);
   border-radius: 3px;
   height: 30px;
   margin-bottom: 10px;
   text-align: center;
+}
+
+.card-text {
+  font-size: 0.8rem;
 }
 
 @keyframes fadeIn {
